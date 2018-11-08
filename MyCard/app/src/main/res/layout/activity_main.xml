@@ -9,93 +9,102 @@
 
     <ImageView
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:layout_height="wrap_content"
         android:scaleType="centerCrop"
-        android:src="@drawable/vithu"/>
+        android:src="@drawable/vithu" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Vithusanan Mathiaparanam"
-        android:textStyle="bold"
-        android:textSize="24sp"
         android:padding="10dp"
-        android:textColor="@android:color/black"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Stauts"
-        android:textSize="20sp"
-        android:textColor="#05B8CC"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Intern"
-        android:textColor="@android:color/holo_red_dark"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="University"
-        android:textSize="20sp"
-        android:textColor="#05B8CC"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="University of Windsor"
-        android:textColor="@android:color/holo_red_dark"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Interest"
-        android:textSize="20sp"
-        android:textColor="#05B8CC"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Android App Developnment"
-        android:textColor="@android:color/holo_red_dark"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Skill set &amp; knowledge"
-        android:textSize="20sp"
-        android:textColor="#05B8CC"/>
+        android:text="Vithusanan Mathiaparanam"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="C"
-            android:textColor="@android:color/holo_red_dark"/>
+        android:orientation="vertical"
+        android:padding="10dp">
 
         <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Java"
-            android:textColor="@android:color/holo_red_dark"/>
+            android:text="Stauts"
+            android:textColor="#05B8CC"
+            android:textSize="20sp" />
 
         <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Git"
-            android:textColor="@android:color/holo_red_dark"/>
+            android:text="Intern"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="University"
+            android:textColor="#05B8CC"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="University of Windsor"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Interest"
+            android:textColor="#05B8CC"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Android App Developnment"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Skill set &amp; knowledge"
+            android:textColor="#05B8CC"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="C"
+                android:textColor="@android:color/holo_red_dark" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Java"
+                android:textColor="@android:color/holo_red_dark" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Git"
+                android:textColor="@android:color/holo_red_dark" />
+        </LinearLayout>
+
     </LinearLayout>
-
 
 
 </LinearLayout>
