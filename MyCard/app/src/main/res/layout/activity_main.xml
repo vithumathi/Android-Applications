@@ -33,6 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Stauts"
+            android:fontFamily="sans-serif"
             android:textColor="#05B8CC"
             android:textSize="20sp" />
 
@@ -40,6 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Intern"
+            android:fontFamily="sans-serif-light"
             android:textColor="@android:color/holo_red_dark" />
 
         <TextView
@@ -53,6 +55,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="University of Windsor"
+            android:fontFamily="sans-serif-light"
             android:textColor="@android:color/holo_red_dark" />
 
         <TextView
@@ -66,6 +69,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Android App Developnment"
+            android:fontFamily="sans-serif-light"
             android:textColor="@android:color/holo_red_dark" />
 
         <TextView
@@ -87,6 +91,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="C"
+                android:fontFamily="sans-serif-light"
                 android:textColor="@android:color/holo_red_dark" />
 
             <TextView
@@ -94,6 +99,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Java"
+                android:fontFamily="sans-serif-light"
                 android:textColor="@android:color/holo_red_dark" />
 
             <TextView
@@ -101,6 +107,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Git"
+                android:fontFamily="sans-serif-light"
                 android:textColor="@android:color/holo_red_dark" />
         </LinearLayout>
 
