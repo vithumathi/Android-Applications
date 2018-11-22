@@ -20,6 +20,7 @@
             android:background="#ffb2b2">
 
             <TextView
+                android:id="@+id/scoreView1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Runs/Wicket"
@@ -27,41 +28,53 @@
                 android:textAlignment="center"/>
 
             <Button
+                android:id="@+id/oneRun1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:onClick="onClick"/>
 
             <Button
+                android:id="@+id/twoRun1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="2"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:onClick="onClick"/>
 
             <Button
+                android:id="@+id/threeRun1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="3"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:onClick="onClick"/>
 
             <Button
+                android:id="@+id/fourRun1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="4"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:onClick="onClick"/>
 
             <Button
+                android:id="@+id/sixRun1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="6"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:onClick="onClick"/>
 
             <Button
+                android:id="@+id/out1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="OUT"
                 android:textColor="@android:color/holo_red_dark"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:onClick="onClick"/>
 
         </LinearLayout>
 
@@ -73,6 +86,7 @@
             android:background="#3090C7">
 
             <TextView
+                android:id="@+id/scoreView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Runs/Wicket"
@@ -80,42 +94,53 @@
                 android:textAlignment="center"/>
 
             <Button
+                android:id="@+id/oneRun2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:onClick="onClick"/>
 
             <Button
+                android:id="@+id/twoRun2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="2"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:onClick="onClick"/>
 
             <Button
+                android:id="@+id/threeRun2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="3"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:onClick="onClick"/>
 
             <Button
+                android:id="@+id/fourRun2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="4"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:onClick="onClick"/>
 
             <Button
+                android:id="@+id/sixRun2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="6"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:onClick="onClick"/>
 
             <Button
+                android:id="@+id/out2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="OUT"
                 android:textColor="@android:color/holo_red_dark"
-                android:layout_gravity="center"/>
-
+                android:layout_gravity="center"
+                android:onClick="onClick"/>
 
 
         </LinearLayout>
@@ -123,10 +148,12 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/reset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="RESET"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:onClick="onClick"/>
 
 
 
