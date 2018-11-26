@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Score Keeper</string>
+
+    <string name="team_a">TEAM A</string>
+    <string name="team_b">TEAM B</string>
+    <string name="score_wkt">Runs/Wicket</string>
+    <string name="reset">RESET</string>
+    <string name="out">OUT</string>
+
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="six">6</string>
+
+
 </resources>

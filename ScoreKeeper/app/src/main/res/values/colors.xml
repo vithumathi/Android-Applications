@@ -3,4 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="teamAClr">#FFB2B2</color>
+    <color name="teamBClr">#3090C7</color>
+    <color name="resetBtnClr">#FF0000</color>
 </resources>
