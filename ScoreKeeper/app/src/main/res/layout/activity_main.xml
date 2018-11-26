@@ -16,65 +16,73 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="vertical"
-            android:background="#ffb2b2">
+            android:background="@color/teamAClr"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/team_a"
+                android:textSize="25sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/scoreView1"
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:text="Runs/Wicket"
-                android:textSize="48sp"
-                android:gravity="center"/>
+                android:layout_height="@dimen/score_textview_height"
+                android:gravity="center"
+                android:text="@string/score_wkt"
+                android:textSize="40sp" />
 
             <Button
                 android:id="@+id/oneRun1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1"
                 android:layout_gravity="center"
-                android:onClick="onClick"/>
+                android:onClick="onClick"
+                android:text="@string/one" />
 
             <Button
                 android:id="@+id/twoRun1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="2"
                 android:layout_gravity="center"
-                android:onClick="onClick"/>
+                android:onClick="onClick"
+                android:text="@string/two" />
 
             <Button
                 android:id="@+id/threeRun1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="3"
                 android:layout_gravity="center"
-                android:onClick="onClick"/>
+                android:onClick="onClick"
+                android:text="@string/three" />
 
             <Button
                 android:id="@+id/fourRun1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="4"
                 android:layout_gravity="center"
-                android:onClick="onClick"/>
+                android:onClick="onClick"
+                android:text="@string/four" />
 
             <Button
                 android:id="@+id/sixRun1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="6"
                 android:layout_gravity="center"
-                android:onClick="onClick"/>
+                android:onClick="onClick"
+                android:text="@string/six" />
 
             <Button
                 android:id="@+id/out1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="OUT"
-                android:textColor="@android:color/holo_red_dark"
                 android:layout_gravity="center"
-                android:onClick="onClick"/>
+                android:onClick="onClick"
+                android:text="@string/out"
+                android:textColor="@android:color/holo_red_dark" />
 
         </LinearLayout>
 
@@ -82,65 +90,73 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="vertical"
-            android:background="#3090C7">
+            android:background="@color/teamBClr"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/team_b"
+                android:textSize="25sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/scoreView2"
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:text="Runs/Wicket"
-                android:textSize="48sp"
-                android:gravity="center"/>
+                android:layout_height="@dimen/score_textview_height"
+                android:gravity="center"
+                android:text="@string/score_wkt"
+                android:textSize="40sp" />
 
             <Button
                 android:id="@+id/oneRun2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1"
                 android:layout_gravity="center"
-                android:onClick="onClick"/>
+                android:onClick="onClick"
+                android:text="@string/one" />
 
             <Button
                 android:id="@+id/twoRun2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="2"
                 android:layout_gravity="center"
-                android:onClick="onClick"/>
+                android:onClick="onClick"
+                android:text="@string/two" />
 
             <Button
                 android:id="@+id/threeRun2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="3"
                 android:layout_gravity="center"
-                android:onClick="onClick"/>
+                android:onClick="onClick"
+                android:text="@string/three" />
 
             <Button
                 android:id="@+id/fourRun2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="4"
                 android:layout_gravity="center"
-                android:onClick="onClick"/>
+                android:onClick="onClick"
+                android:text="@string/four" />
 
             <Button
                 android:id="@+id/sixRun2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="6"
                 android:layout_gravity="center"
-                android:onClick="onClick"/>
+                android:onClick="onClick"
+                android:text="@string/six" />
 
             <Button
                 android:id="@+id/out2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="OUT"
-                android:textColor="@android:color/holo_red_dark"
                 android:layout_gravity="center"
-                android:onClick="onClick"/>
+                android:onClick="onClick"
+                android:text="@string/out"
+                android:textColor="@android:color/holo_red_dark" />
 
 
         </LinearLayout>
@@ -151,13 +167,10 @@
         android:id="@+id/reset"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="RESET"
-        android:textSize="40sp"
-        android:background="#ff00"
         android:layout_gravity="center"
-        android:onClick="onClick"/>
-
-
-
+        android:background="@color/resetBtnClr"
+        android:onClick="onClick"
+        android:text="@string/reset"
+        android:textSize="@dimen/resetBtn_font_size" />
 
 </LinearLayout>

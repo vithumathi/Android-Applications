@@ -7,18 +7,32 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
     TextView scoreViewA;
     TextView scoreViewB;
-    Button oneA, twoA, threeA, fourA, sixA, outA, oneB, twoB, threeB, fourB, sixB, outB, reset;
-
-    int ttlRunA = 0, ttlRunB = 0, ttlOutA = 0, ttlOutB = 0;
+    Button oneA;
+    Button twoA;
+    Button threeA;
+    Button fourA;
+    Button sixA;
+    Button outA;
+    Button oneB;
+    Button twoB;
+    Button threeB;
+    Button fourB;
+    Button sixB;
+    Button outB;
+    Button reset;
+    Team teamA;
+    Team teamB;
+    int ttlRunA = 0;
+    int ttlRunB = 0;
+    int ttlOutA = 0;
+    int ttlOutB = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         scoreViewA = (TextView) findViewById(R.id.scoreView1);
         scoreViewB = (TextView) findViewById(R.id.scoreView2);
         oneA = (Button) findViewById(R.id.oneRun1);
@@ -34,66 +48,45 @@ public class MainActivity extends AppCompatActivity {
         sixB = (Button) findViewById(R.id.sixRun1);
         outB = (Button) findViewById(R.id.out2);
         reset = (Button) findViewById(R.id.reset);
-        int ttlRunA = 0, ttlRunB = 0, ttlOutA = 0, ttlOutB = 0;
-    }
-
-    public void displayScoreA(int ttlRunA, int ttlOutA) {
-        scoreViewA.setText(ttlRunA + "/" + ttlOutA);
-    }
-
-    public void displayScoreB(int ttlRunB, int ttlOutB) {
-        scoreViewB.setText(ttlRunB + "/" + ttlOutB);
+        teamA = new Team();
+        teamB = new Team();
+        ttlRunA = 0;
+        ttlRunB = 0;
+        ttlOutA = 0;
+        ttlOutB = 0;
     }
 
     public void onClick(View v) {
         int id = v.getId();
-
         if (id == R.id.oneRun1) {
-            ttlRunA += 1;
-            displayScoreA(ttlRunA, ttlOutA);
+            teamA.addScore(1);
         } else if (id == R.id.twoRun1) {
-            ttlRunA += 2;
-            displayScoreA(ttlRunA, ttlOutA);
+            teamA.addScore(2);
         } else if (id == R.id.threeRun1) {
-            ttlRunA += 3;
-            displayScoreA(ttlRunA, ttlOutA);
+            teamA.addScore(3);
         } else if (id == R.id.fourRun1) {
-            ttlRunA += 4;
-            displayScoreA(ttlRunA, ttlOutA);
+            teamA.addScore(4);
         } else if (id == R.id.sixRun1) {
-            ttlRunA += 6;
-            displayScoreA(ttlRunA, ttlOutA);
+            teamA.addScore(6);
         } else if (id == R.id.out1) {
-            ttlOutA += 1;
-            displayScoreA(ttlRunA, ttlOutA);
+            teamA.out();
         } else if (id == R.id.oneRun2) {
-            ttlRunB += 1;
-            displayScoreB(ttlRunB, ttlOutB);
+            teamB.addScore(1);
         } else if (id == R.id.twoRun2) {
-            ttlRunB += 2;
-            displayScoreB(ttlRunB, ttlOutB);
+            teamB.addScore(2);
         } else if (id == R.id.threeRun2) {
-            ttlRunB += 3;
-            displayScoreB(ttlRunB, ttlOutB);
+            teamB.addScore(3);
         } else if (id == R.id.fourRun2) {
-            ttlRunB += 4;
-            displayScoreB(ttlRunB, ttlOutB);
+            teamB.addScore(4);
         } else if (id == R.id.sixRun2) {
-            ttlRunB += 6;
-            displayScoreB(ttlRunB, ttlOutB);
+            teamB.addScore(6);
         } else if (id == R.id.out2) {
-            ttlOutB += 1;
-            displayScoreB(ttlRunB, ttlOutB);
-        } else if (id == R.id.reset){
-
-            ttlRunA = 0;
-            ttlOutA = 0;
-            ttlRunB = 0;
-            ttlOutB = 0;
-            displayScoreA(ttlRunA, ttlOutA);
-            displayScoreB(ttlRunB, ttlOutB);
+            teamB.out();
+        } else if (id == R.id.reset) {
+            teamA.reset();
+            teamB.reset();
         }
-
-
+        scoreViewA.setText(teamA.getScore());
+        scoreViewB.setText(teamB.getScore());
     }
 }
