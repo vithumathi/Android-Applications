@@ -22,10 +22,10 @@
             <TextView
                 android:id="@+id/scoreView1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="120dp"
                 android:text="Runs/Wicket"
                 android:textSize="48sp"
-                android:textAlignment="center"/>
+                android:gravity="center"/>
 
             <Button
                 android:id="@+id/oneRun1"
@@ -88,10 +88,10 @@
             <TextView
                 android:id="@+id/scoreView2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="120dp"
                 android:text="Runs/Wicket"
                 android:textSize="48sp"
-                android:textAlignment="center"/>
+                android:gravity="center"/>
 
             <Button
                 android:id="@+id/oneRun2"
@@ -149,9 +149,11 @@
 
     <Button
         android:id="@+id/reset"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:text="RESET"
+        android:textSize="40sp"
+        android:background="#ff00"
         android:layout_gravity="center"
         android:onClick="onClick"/>
 
