@@ -28,6 +28,7 @@
             android:padding="16dp">
 
             <TextView
+                style="@style/Questions"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/question1"
@@ -50,10 +51,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/q1c3"
                 android:textSize="@dimen/answer_font_size"/>
-
-
-
-
         </LinearLayout>
 
         <LinearLayout
@@ -63,6 +60,7 @@
             android:padding="16dp">
 
             <TextView
+                style="@style/Questions"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/question2"
@@ -101,6 +99,7 @@
             android:padding="16dp">
 
             <TextView
+                style="@style/Questions"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/question3"
@@ -127,6 +126,7 @@
             android:padding="16dp">
 
             <TextView
+                style="@style/Questions"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/question4"
@@ -146,6 +146,7 @@
             android:padding="16dp">
 
             <TextView
+                style="@style/Questions"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/question5"
