@@ -9,7 +9,16 @@
     </style>
 
     <style name="Questions" parent="TextAppearance.AppCompat">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">#FF0000</item>
+        <item name="android:textSize">@dimen/question_font_size</item>
+    </style>
+
+    <style name="Answers" parent="TextAppearance.AppCompat">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/answer_font_size</item>
     </style>
 
 </resources>
