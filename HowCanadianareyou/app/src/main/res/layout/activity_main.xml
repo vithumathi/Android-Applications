@@ -9,10 +9,17 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:focusable="true"
-        android:focusableInTouchMode="true">
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/scoreView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_green_dark"
+            android:text="Your Score"
+            android:textAlignment="center" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -32,25 +39,34 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/question1"
-                android:textSize="@dimen/question_font_size"/>
+                android:textSize="@dimen/question_font_size" />
 
-            <RadioButton
+            <RadioGroup
+                android:id="@+id/radioGroup1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/q1c1"
-                android:textSize="@dimen/answer_font_size"/>
+                android:layout_height="wrap_content">
 
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/q1c2"
-                android:textSize="@dimen/answer_font_size"/>
+                <RadioButton
+                    android:id="@+id/q1c1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/q1c1"
+                    android:textSize="@dimen/answer_font_size" />
 
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/q1c3"
-                android:textSize="@dimen/answer_font_size"/>
+                <RadioButton
+                    android:id="@+id/q1c2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/q1c2"
+                    android:textSize="@dimen/answer_font_size" />
+
+                <RadioButton
+                    android:id="@+id/q1c3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/q1c3"
+                    android:textSize="@dimen/answer_font_size" />
+            </RadioGroup>
         </LinearLayout>
 
         <LinearLayout
@@ -64,31 +80,35 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/question2"
-                android:textSize="@dimen/question_font_size"/>
+                android:textSize="@dimen/question_font_size" />
 
             <CheckBox
+                android:id="@+id/q2c1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/q2c1"
-                android:textSize="@dimen/answer_font_size"/>
+                android:textSize="@dimen/answer_font_size" />
 
             <CheckBox
+                android:id="@+id/q2c2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/q2c2"
-                android:textSize="@dimen/answer_font_size"/>
+                android:textSize="@dimen/answer_font_size" />
 
             <CheckBox
+                android:id="@+id/q2c3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/q2c3"
-                android:textSize="@dimen/answer_font_size"/>
+                android:textSize="@dimen/answer_font_size" />
 
             <CheckBox
+                android:id="@+id/q2c4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/q2c4"
-                android:textSize="@dimen/answer_font_size"/>
+                android:textSize="@dimen/answer_font_size" />
 
         </LinearLayout>
 
@@ -103,19 +123,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/question3"
-                android:textSize="@dimen/question_font_size"/>
+                android:textSize="@dimen/question_font_size" />
 
-            <RadioButton
+            <RadioGroup
+                android:id="@+id/radioGroup3"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/q3c1"
-                android:textSize="@dimen/answer_font_size"/>
+                android:layout_height="wrap_content">
 
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/q3c2"
-                android:textSize="@dimen/answer_font_size"/>
+                <RadioButton
+                    android:id="@+id/q3c1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/q3c1"
+                    android:textSize="@dimen/answer_font_size" />
+
+                <RadioButton
+                    android:id="@+id/q3c2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/q3c2"
+                    android:textSize="@dimen/answer_font_size" />
+            </RadioGroup>
 
         </LinearLayout>
 
@@ -130,9 +158,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/question4"
-                android:textSize="@dimen/question_font_size"/>
+                android:textSize="@dimen/question_font_size" />
 
             <EditText
+                android:id="@+id/q4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/edittext_hint" />
@@ -150,38 +179,54 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/question5"
-                android:textSize="@dimen/question_font_size"/>
+                android:textSize="@dimen/question_font_size" />
 
+            <RadioGroup
+                android:id="@+id/radioGroup5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
             <RadioButton
+                android:id="@+id/q5c1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/q5c1"
-                android:textSize="@dimen/answer_font_size"/>
+                android:textSize="@dimen/answer_font_size" />
 
             <RadioButton
+                android:id="@+id/q5c2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/q5c2"
-                android:textSize="@dimen/answer_font_size"/>
+                android:textSize="@dimen/answer_font_size" />
 
             <RadioButton
+                android:id="@+id/q5c3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/q5c3"
-                android:textSize="@dimen/answer_font_size"/>
+                android:textSize="@dimen/answer_font_size" />
 
             <RadioButton
+                android:id="@+id/q5c4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/q5c4"/>
+                android:text="@string/q5c4" />
 
             <RadioButton
+                android:id="@+id/q5c5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/q5c5"
-                android:textSize="@dimen/answer_font_size"/>
+                android:textSize="@dimen/answer_font_size" />
+            </RadioGroup>
 
         </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="SUBMIT" />
 
 
     </LinearLayout>
