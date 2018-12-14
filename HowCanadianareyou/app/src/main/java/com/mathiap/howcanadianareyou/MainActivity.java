@@ -11,12 +11,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    protected double ttlScr;
-    protected int correctAns = 0;
-    protected int atmptQue = 0;
-    protected int incAns = 0;
-    protected int unAtmptQue = 0;
-    protected static final int TOTAL_QUESTIONS = 5;
+    static final int TOTAL_QUESTIONS = 5;
+    static final String Q_ONE_ANS = "Village";
+    static final String Q_THREE_ANS = "True";
+    static final String Q_FOUR_ANS = "nunavut";
+    static final String Q_FIVE_ANS = "Five";
+    double ttlScr;
+    int correctAns = 0;
+    int atmptQue = 0;
+    int incAns = 0;
+    int unAtmptQue = 0;
     RadioGroup queOneGrp;
     RadioGroup queThreeGrp;
     RadioGroup queFiveGrp;
@@ -27,8 +31,6 @@ public class MainActivity extends AppCompatActivity {
     CheckBox chcTwo;
     CheckBox chcThree;
     CheckBox chcFour;
-    TextView scoreCard;
-
     EditText queFourAns;
 
     @Override
@@ -38,21 +40,18 @@ public class MainActivity extends AppCompatActivity {
         queOneGrp = (RadioGroup) findViewById(R.id.radioGroup1);
         queThreeGrp = (RadioGroup) findViewById(R.id.radioGroup3);
         queFiveGrp = (RadioGroup) findViewById(R.id.radioGroup5);
-
-        scoreCard = (TextView) findViewById(R.id.scoreView);
-
         chcOne = (CheckBox) findViewById(R.id.q2c1);
         chcTwo = (CheckBox) findViewById(R.id.q2c2);
         chcThree = (CheckBox) findViewById(R.id.q2c3);
         chcFour = (CheckBox) findViewById(R.id.q2c4);
-
         queFourAns = (EditText) findViewById(R.id.q4);
-
     }
 
     public void setScoreCard() {
         ttlScr = (((double) correctAns / TOTAL_QUESTIONS) * 100);
-        scoreCard.setText("Your score: " + ttlScr + "% You've attempted " + atmptQue + " out of the " + TOTAL_QUESTIONS + " questions. Unattempted question " + unAtmptQue);
+        String tstMsg = "Your score: " + ttlScr + "% You've attempted " + atmptQue + " out of the " + TOTAL_QUESTIONS + " questions. Unattempted question " + unAtmptQue + " .Incorrect answers: " + incAns;
+        Toast.makeText(MainActivity.this, tstMsg,
+                Toast.LENGTH_LONG).show();
         ttlScr = 0.0;
         atmptQue = 0;
         unAtmptQue = 0;
@@ -61,13 +60,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick(View v) {
+        // Logic of question 1
         int radioButtonId = queOneGrp.getCheckedRadioButtonId();
-
         if (radioButtonId == -1) {
             unAtmptQue++;
         } else {
             queOneBttn = (RadioButton) findViewById(radioButtonId);
-            if (queOneBttn.getText().equals("Village")) {
+            if (queOneBttn.getText().equals(Q_ONE_ANS)) {
                 correctAns++;
                 atmptQue++;
             } else {
@@ -75,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
                 atmptQue++;
             }
         }
+        // Logic of question 2
         if (!chcOne.isChecked() && !chcTwo.isChecked() && !chcThree.isChecked() && !chcFour.isChecked()) {
             unAtmptQue++;
         } else {
@@ -86,13 +86,13 @@ public class MainActivity extends AppCompatActivity {
                 atmptQue++;
             }
         }
-
+        // Logic of question 3
         int radioButtonId1 = queThreeGrp.getCheckedRadioButtonId();
         if (radioButtonId1 == -1) {
             unAtmptQue++;
         } else {
             queThreeBttn = (RadioButton) findViewById(radioButtonId1);
-            if (queThreeBttn.getText().equals("True")) {
+            if (queThreeBttn.getText().equals(Q_THREE_ANS)) {
                 correctAns++;
                 atmptQue++;
             } else {
@@ -100,24 +100,26 @@ public class MainActivity extends AppCompatActivity {
                 atmptQue++;
             }
         }
-
-
+        // Logic of question 4
         String ans = queFourAns.getText().toString().toLowerCase();
-
-        if (ans.equals("nunavut")){
-            correctAns++;
-            atmptQue++;
-        }else{
-            incAns++;
-            atmptQue++;
+        if (ans.equals("")) {
+            unAtmptQue++;
+        } else {
+            if (ans.equals(Q_FOUR_ANS)) {
+                correctAns++;
+                atmptQue++;
+            } else {
+                incAns++;
+                atmptQue++;
+            }
         }
-
+        // Logic of question 5
         int radioButtonId2 = queFiveGrp.getCheckedRadioButtonId();
         if (radioButtonId2 == -1) {
             unAtmptQue++;
         } else {
             queFiveBttn = (RadioButton) findViewById(radioButtonId2);
-            if (queFiveBttn.getText().equals("Five")) {
+            if (queFiveBttn.getText().equals(Q_FIVE_ANS)) {
                 correctAns++;
                 atmptQue++;
             } else {
@@ -125,7 +127,6 @@ public class MainActivity extends AppCompatActivity {
                 atmptQue++;
             }
         }
-
         setScoreCard();
     }
 }

@@ -13,12 +13,6 @@
     <string name="question5">5. Most of Ontario\'s Southern border follows a line of lakes called
         "The Great Lakes"\. How many are there?</string>
 
-    <string name="answer1">Village</string>
-    <string name="answer2"></string>
-    <string name="answer3">True</string>
-    <string name="answer4">Nunavut</string>
-    <string name="answer5">Five</string>
-
     <string name="q1c1">Village</string>
     <string name="q1c2">Community</string>
     <string name="q1c3">Freedom</string>
@@ -36,6 +30,10 @@
     <string name="q5c3">Three</string>
     <string name="q5c4">Four</string>
     <string name="q5c5">Five</string>
+
+    <string name="submitBttn">SUBMIT</string>
+
+
 
 
 </resources>
