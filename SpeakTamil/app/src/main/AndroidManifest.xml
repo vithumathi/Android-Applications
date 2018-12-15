@@ -29,10 +29,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.android.SpeakTamil.NumbersActivity" />
-        <activity android:name="com.example.android.SpeakTamil.FamilyMembersActivity" />
-        <activity android:name="com.example.android.SpeakTamil.ColorsActivity" />
-        <activity android:name="com.example.android.SpeakTamil.PhrasesActivity"></activity>
+        <activity android:name="com.example.android.SpeakTamil.NumbersActivity"
+            android:label="@string/category_numbers"/>
+        <activity android:name="com.example.android.SpeakTamil.FamilyMembersActivity"
+            android:label="@string/category_family"/>
+        <activity android:name="com.example.android.SpeakTamil.ColorsActivity"
+            android:label="@string/category_colors"/>
+        <activity android:name="com.example.android.SpeakTamil.PhrasesActivity"
+            android:label="@string/category_phrases"/>
+
     </application>
 
 </manifest>
