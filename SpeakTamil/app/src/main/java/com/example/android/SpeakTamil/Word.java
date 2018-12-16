@@ -17,9 +17,18 @@ public class Word {
      * The Tamil word
      */
     private String mTamilWord;
+    /**
+     *  Image resource ID for the word
+     */
+    private int mImageResourceId = NO_IMAGE_PROVIDED;
+
+    private static final int NO_IMAGE_PROVIDED = -1;
+
+
 
     /**
      * Create a new word object.
+
      *
      * @param defaultTranslation is the word in a language that the user is already familiar with (such as English)
      * @param tamilTranslation is the word in the Tamil language
@@ -29,6 +38,22 @@ public class Word {
         this.mDefaultTranslation = defaultTranslation;
         this.mTamilTranslation = tamilTranslation;
         this.mTamilWord = tamilWord;
+    }
+
+    /**
+     * Create a new word object.
+
+     *
+     * @param defaultTranslation is the word in a language that the user is already familiar with (such as English)
+     * @param tamilTranslation is the word in the Tamil language
+     * @param tamilWord is the word written in Tamil language
+     * @param imageId is the drawable resource ID for the image asset
+     */
+    public Word (String defaultTranslation, String tamilTranslation, String tamilWord, int imageId){
+        this.mDefaultTranslation = defaultTranslation;
+        this.mTamilTranslation = tamilTranslation;
+        this.mTamilWord = tamilWord;
+        this.mImageResourceId = imageId;
     }
 
     public String getmDefaultTranslation() {
@@ -41,5 +66,17 @@ public class Word {
 
     public String getmTamilWord() {
         return mTamilWord;
+    }
+
+    public int getmImageResourceId() {
+        return mImageResourceId;
+    }
+
+    /**
+     * Returns whether or not there is an image for this word
+     * @return
+     */
+    public Boolean hasImage(){
+        return mImageResourceId != NO_IMAGE_PROVIDED;
     }
 }
