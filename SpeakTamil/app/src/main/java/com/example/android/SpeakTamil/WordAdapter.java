@@ -1,12 +1,14 @@
 package com.example.android.SpeakTamil;
 
 import android.app.Activity;
+import android.media.Image;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -56,6 +58,16 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
         TextView tamilTextView = (TextView) listItemView.findViewById(R.id.tamil_text_view);
         tamilTextView.setText(currentWord.getmTamilWord());
+
+        ImageView image = (ImageView) listItemView.findViewById(R.id.image);
+
+        if(currentWord.hasImage()){
+            image.setImageResource(currentWord.getmImageResourceId());
+            image.setVisibility(View.VISIBLE);
+        }else{
+            image.setVisibility(View.GONE);
+        }
+
 
 
 
