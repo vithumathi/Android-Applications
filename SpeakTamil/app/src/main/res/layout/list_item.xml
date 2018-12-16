@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:minHeight="@dimen/list_item_height"
-    android:background="@color/white">
+    android:background="@color/grey">
 
     <ImageView
         android:id="@+id/image"
@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingLeft="16dp"
-        android:background="@color/white">
+        android:background="@color/grey">
 
         <TextView
             android:id="@+id/default_text_view"
