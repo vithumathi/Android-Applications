@@ -17,13 +17,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            android:src="@drawable/cafeCoffee" />
+            android:src="@drawable/cafe_coffee" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="5dp"
-            android:text="Sit back, relax, and a have a cup of coffee"
+            android:text="@string/shop_motto"
             android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="15sp"
@@ -43,13 +43,13 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingRight="10dp"
+                    android:paddingEnd="10dp"
                     android:src="@drawable/on_location" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="123 Blue Jays Way, \n Toronto, Ontario" />
+                    android:text="@string/shop_address" />
 
             </LinearLayout>
 
@@ -62,13 +62,13 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingRight="10dp"
+                    android:paddingEnd="10dp"
                     android:src="@drawable/ic_local_phone_24dp" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="(905) 123 456" />
+                    android:text="@string/shop_number" />
 
             </LinearLayout>
 
@@ -83,7 +83,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="About"
+                android:text="@string/about"
                 android:textSize="34sp" />
 
 
@@ -92,7 +92,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-light"
                 android:paddingTop="5dp"
-                android:text="Located in Toronto's downtown district, E's Cafe offers a comfortable environment for everyone. Come and enjoy our selection of homemade sandwiches, panini, wraps, salads and soups. Whether you're looking to relax over a cup of coffee or grab a quick bite to go, E's Cafe is for you."
+                android:text="@string/shop_description"
                 android:textAlignment="textStart" />
 
 

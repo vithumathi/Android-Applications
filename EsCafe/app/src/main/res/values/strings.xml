@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">E\'s Cafe</string>
+
+
+    <string name="shop_motto">Sit back, relax, and a have a cup of coffee</string>
+    <string name="shop_address">123 Blue Jays Way, \n Toronto, Ontario</string>
+    <string name="shop_number">(905) 123 456</string>
+    <string name="about">About</string>
+    <string name="shop_description">Located in Toronto\'s downtown district, E\'s Cafe offers a comfortable environment for everyone. Come and enjoy our selection of homemade sandwiches, panini, wraps, salads and soups. Whether you\'re looking to relax over a cup of coffee or grab a quick bite to go, E\'s Cafe is for you.</string>
 </resources>
