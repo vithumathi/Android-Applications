@@ -12,23 +12,6 @@
             android:id="@+id/music_lib"
             android:icon="@drawable/ic_library_music"
             android:title="@string/my_lib" />
-        <item
-            android:id="@+id/trending"
-            android:icon="@drawable/ic_trending"
-            android:title="@string/my_trnd" />
     </group>
-
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
-        </menu>
-    </item>
 
 </menu>
