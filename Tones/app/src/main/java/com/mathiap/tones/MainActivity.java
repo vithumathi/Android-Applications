@@ -1,6 +1,7 @@
 package com.mathiap.tones;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -21,21 +22,47 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+
+
+
+
+
+
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+
+
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+
+                switch(item.getItemId()){
+                    case R.id.now_playing:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.main_view, new NowPlayingFragment()).commit();
+                        drawer.closeDrawer(GravityCompat.START);
+                        break;
+                    case R.id.music_lib:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.main_view, new MyLibraryFragment()).commit();
+                        drawer.closeDrawer(GravityCompat.START);
+                        break;
+                    case R.id.trending:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.main_view, new MyTrendFragment()).commit();
+                        drawer.closeDrawer(GravityCompat.START);
+                        break;
+
+                }
+
+
+                return true;
+            }
+        });
     }
 
     @Override
@@ -73,11 +100,10 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-        if (id == R.id.nav_camera) {
+        if (id == R.id.now_playing) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-        } else if (id == R.id.nav_slideshow) {
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.music_lib) {
+        } else if (id == R.id.trending) {
         } else if (id == R.id.nav_share) {
         } else if (id == R.id.nav_send) {
         }
