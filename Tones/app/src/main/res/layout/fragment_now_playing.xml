@@ -1,14 +1,62 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:FrameLayout="http://schemas.android.com/apk/res-auto"
     tools:context="com.mathiap.tones.NowPlayingFragment"
-    android:background="@android:color/holo_red_dark">
+    android:background="@android:color/darker_gray"
+    android:orientation="vertical">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:src="@drawable/cafe_coffee"
+        android:scaleType="centerCrop"/>
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/now_playing_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        android:text="Now Playing"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="40dp"
+            android:src="@mipmap/baseline_skip_previous_white_24dp"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="40dp"
+            android:src="@mipmap/baseline_play_arrow_white_24dp"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="40dp"
+            android:src="@mipmap/baseline_skip_next_white_24dp"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="40dp"
+            android:src="@mipmap/baseline_stop_white_24dp"/>
+
+    </LinearLayout>
+</LinearLayout>
