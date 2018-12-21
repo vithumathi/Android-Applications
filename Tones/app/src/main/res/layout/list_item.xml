@@ -3,52 +3,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/darker_gray"
+    android:background="#F5F5F5"
     android:minHeight="@dimen/list_item_height"
     android:orientation="vertical"
     android:padding="16dp">
 
     <ImageView
         android:id="@+id/image"
-        android:scaleType="centerCrop"
         android:layout_width="match_parent"
-        android:layout_height="88dp" />
+        android:layout_height="88dp"
+        android:scaleType="centerCrop" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/white"
+        android:background="@android:color/darker_gray"
         android:orientation="vertical"
         android:paddingLeft="10dp"
         android:paddingRight="10dp">
 
         <TextView
             android:id="@+id/song_name_text_view"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            style="@style/list_item_style"
             android:textAppearance="@android:style/TextAppearance.Medium"
-            android:textColor="@android:color/black"
             android:textStyle="bold"
-            tools:text="Song Name" />
+            tools:text="@string/song_name_list" />
 
         <TextView
             android:id="@+id/album_name_text_view"
-            android:layout_width="279dp"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            style="@style/list_item_style"
             android:textAppearance="@android:style/TextAppearance.Small"
-            android:textColor="@android:color/black"
-            tools:text="Album" />
+            tools:text="@string/album_name_list" />
 
         <TextView
             android:id="@+id/artist_name_text_view"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            style="@style/list_item_style"
             android:textAppearance="@android:style/TextAppearance.Small"
-            android:textColor="@android:color/black"
-            tools:text="Artist" />
+            tools:text="@string/artist_name_list" />
     </LinearLayout>
 
 </LinearLayout>
