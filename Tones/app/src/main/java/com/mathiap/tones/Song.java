@@ -30,7 +30,7 @@ public class Song {
      * Create a new song object.
      *
      * @param songName   is the song name
-     * @param albumName is the artist name
+     * @param albumName  is the artist name
      * @param artistName is the artist name
      * @param albumCover is the image resource id of the album cover
      */
@@ -47,6 +47,7 @@ public class Song {
     public String getmSongName() {
         return mSongName;
     }
+
     /**
      * @return the album name
      */

@@ -1,11 +1,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:FrameLayout="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:FrameLayout="http://schemas.android.com/apk/res-auto"
-    tools:context="com.mathiap.tones.NowPlayingFragment"
     android:background="@android:color/darker_gray"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context="com.mathiap.tones.NowPlayingFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <ImageView
@@ -13,8 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="8"
-        android:src="@drawable/tone"
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop"
+        android:src="@drawable/tone" />
 
     <TextView
         android:id="@+id/now_playing_text_view"
@@ -22,73 +22,46 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="@android:color/white"
-        android:text="Now Playing"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:text="@string/now_playing" />
 
     <SeekBar
-        android:background="@android:color/white"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:background="@android:color/white" />
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal"
+        style="@style/horizontal_linear_layout"
         android:background="@android:color/white">
 
         <TextView
             android:id="@+id/artist_name_text_view"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@android:color/white"
-            android:text="Album Artist"
-            android:gravity="center"/>
+            style="@style/album_artist"
+            android:text="@string/album_artist" />
 
         <TextView
             android:id="@+id/album_name_text_view"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@android:color/white"
-            android:text="Album Name"
-            android:gravity="center"/>
+            style="@style/album_artist"
+            android:text="@string/album_name" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
+    <LinearLayout style="@style/horizontal_linear_layout">
 
         <ImageView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:minHeight="40dp"
-            android:src="@mipmap/baseline_skip_previous_white_24dp"/>
+            style="@style/music_action_buttons"
+            android:src="@mipmap/skip_previous_white" />
 
         <ImageView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:minHeight="40dp"
-            android:src="@mipmap/baseline_play_arrow_white_24dp"/>
+            style="@style/music_action_buttons"
+            android:src="@mipmap/play_arrow_white" />
 
         <ImageView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:minHeight="40dp"
-            android:src="@mipmap/baseline_skip_next_white_24dp"/>
+            style="@style/music_action_buttons"
+            android:src="@mipmap/skip_next_white" />
 
         <ImageView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:minHeight="40dp"
-            android:src="@mipmap/baseline_stop_white_24dp"/>
+            style="@style/music_action_buttons"
+            android:src="@mipmap/stop_white" />
 
     </LinearLayout>
 </LinearLayout>
