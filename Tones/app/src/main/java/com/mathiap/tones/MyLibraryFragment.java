@@ -1,5 +1,6 @@
 package com.mathiap.tones;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -58,9 +59,13 @@ public class MyLibraryFragment extends Fragment {
                 bundle.putString("Artist", song.getmArtistName());
                 bundle.putString("Album", song.getmAlbumName());
                 bundle.putInt("AlbumCover", song.getmAlbumCover());
-            nowPlaying.setArguments(bundle);
+                nowPlaying.setArguments(bundle);
+
+
+                Intent intent = getActivity().getIntent();
+                intent.putExtras(bundle);
                 FragmentManager manager = getFragmentManager();
-                manager.beginTransaction().replace(R.id.main_view, nowPlaying).commit();
+                manager.beginTransaction().add(R.id.main_view, nowPlaying, "nowPlayingFragment").commit();
             }
         });
 
