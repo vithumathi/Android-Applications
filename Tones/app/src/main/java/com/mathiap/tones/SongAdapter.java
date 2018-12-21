@@ -13,7 +13,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 /**
- * Created by Vithu on 2018-12-15.
+ * {@link SongAdapter} is an {@link ArrayAdapter} that can provide the layout for each list item
+ * based on a data source, which is a list of {@link Song} objects.
  */
 public class SongAdapter extends ArrayAdapter<Song> {
     public SongAdapter(Activity context, ArrayList<Song> mSongs) {
@@ -46,6 +47,8 @@ public class SongAdapter extends ArrayAdapter<Song> {
         ImageView image = (ImageView) listItemView.findViewById(R.id.image);
         image.setImageResource(currentSong.getmAlbumCover());
         image.setVisibility(View.VISIBLE);
+        // Return the whole list item layout (containing 3 TextViews, and an ImageView) so that it can be shown in
+        // the ListView.
         return listItemView;
     }
 }
