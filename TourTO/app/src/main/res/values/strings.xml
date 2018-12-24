@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">TourTO</string>
+
+    <!-- Category name for phrases [CHAR LIMIT=20] -->
+    <string name="category_attractions">Attractions</string>
+
+    <!-- Category name for the vocabulary words for colors [CHAR LIMIT=20] -->
+    <string name="category_sports">Sports</string>
+
+    <!-- Category name for the vocabulary words for numbers [CHAR LIMIT=20] -->
+    <string name="category_food">Food</string>
+
+    <!-- Category name for the vocabulary words for family members [CHAR LIMIT=20] -->
+    <string name="category_history">History</string>
+
+    <!--List items-->
+    <string name="list_attr_name">Attraction</string>
+    <string name="list_attr_disc">Description</string>
+    <string name="list_attr_addr">Address</string>
+
+
+    <!--Attractions name-->
+    <string name="cn_tower">CN Tower</string>
+    <string name="gooderham_building">Gooderham Building</string>
+    <string name="casa_loma">Casa Loma</string>
+    <string name="royal_ontario_museum">Royal Ontario Museum</string>
+    <string name="aquarium">Ripley\'s Aquarium of Canada</string>
+
+    <!--Attractions description-->
+    <string name="cn_tower_disc">Standing over half a kilometre high, the CN Tower is a signature icon of Toronto\'s skyline and a symbol of Canada</string>
+    <string name="gooderham_building_disc">The first example of a flatiron-style building in North America</string>
+    <string name="casa_loma_disc">Gothic Revival style mansion and garden in midtown Toronto</string>
+    <string name="royal_ontario_museum_disc">The largest museums in Canada. ROM is home to museum of art, world culture and natural history</string>
+    <string name="aquarium_disc">Immerse yourself in a world of 20000 aquatic animals and discover your own underwater adventure at Ripley\'s Aquarium of Canada!</string>
+
+
+
+    <!--Attractions address-->
+
+    <string name="cn_tower_addr">301 Front St W, Toronto, ON M5V 2T6</string>
+    <string name="gooderham_building_addr">49 Wellington Street East, Toronto, ON M5E 1C9 </string>
+    <string name="casa_loma_addr">1 Austin Terrace, Toronto, ON M5R 1X8</string>
+    <string name="royal_ontario_museum_addr"> 100 Queens Park, Toronto, ON M5S 2C6</string>
+    <string name="aquarium_addr">288 Bremner Blvd, Toronto, ON M5V 3L9</string>
+
+</resources>
