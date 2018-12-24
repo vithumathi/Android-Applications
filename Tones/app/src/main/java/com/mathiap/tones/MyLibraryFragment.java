@@ -12,9 +12,10 @@ import android.widget.GridView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
- * A simple {@link Fragment} subclass.
+ * {@link Fragment} that displays the list of songs.
  */
 public class MyLibraryFragment extends Fragment {
     public MyLibraryFragment() {
@@ -25,7 +26,8 @@ public class MyLibraryFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         final View rootView = inflater.inflate(R.layout.song_list, container, false);
-        final ArrayList<Song> songs = new ArrayList<Song>();
+        // Create a list of songs
+        final List<Song> songs = new ArrayList<Song>();
         songs.add(new Song("Hey hello", "Hello", "Chris", R.drawable.cover1));
         songs.add(new Song("Blast off", "Renegade", "Yuvan", R.drawable.cover2));
         songs.add(new Song("Mask off", "Future", "Future", R.drawable.cover4));
@@ -50,6 +52,7 @@ public class MyLibraryFragment extends Fragment {
                 bundle.putString("Album", song.getmAlbumName());
                 bundle.putInt("AlbumCover", song.getmAlbumCover());
                 nowPlaying.setArguments(bundle);
+                // Pass back the user selected song details to parent activity
                 Intent intent = getActivity().getIntent();
                 intent.putExtras(bundle);
                 FragmentManager manager = getFragmentManager();

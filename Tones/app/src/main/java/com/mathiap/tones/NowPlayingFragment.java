@@ -1,9 +1,7 @@
 package com.mathiap.tones;
 
 import android.os.Bundle;
-import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
-import android.support.v4.widget.DrawerLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,14 +9,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
- * A simple {@link Fragment} subclass.
+ * {@link Fragment} that displays the user selected song and its details.
  */
 public class NowPlayingFragment extends Fragment {
     protected String sName;
     protected String aName;
     protected String albName;
     protected int albCover;
-    private String someVarA;
 
     public NowPlayingFragment() {
         // Required empty public constructor
@@ -28,6 +25,7 @@ public class NowPlayingFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         final View rootView = inflater.inflate(R.layout.fragment_now_playing, container, false);
+        // Create an {@link Bundle} & pass user selected song details back to now playing fragment to populate the view
         Bundle bundle = getArguments();
         if (bundle != null) {
             sName = bundle.getString("Song");

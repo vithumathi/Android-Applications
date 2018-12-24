@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
                 DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
                 switch (item.getItemId()) {
                     case R.id.now_playing:
+                        // Check whether the user has selected a song already
                         Bundle data = getIntent().getExtras();
                         if (data != null) {
                             NowPlayingFragment nowPlaying = new NowPlayingFragment();
