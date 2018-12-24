@@ -11,9 +11,6 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class SportsFragment extends Fragment {
     public SportsFragment() {
         // Required empty public constructor

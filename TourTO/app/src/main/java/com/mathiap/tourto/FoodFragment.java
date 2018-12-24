@@ -11,9 +11,6 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class FoodFragment extends Fragment {
     public FoodFragment() {
         // Required empty public constructor

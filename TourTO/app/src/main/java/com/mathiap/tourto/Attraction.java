@@ -83,7 +83,7 @@ public class Attraction {
     }
 
     /**
-     * @return whether or not there is an image for this word
+     * @return whether or not there is an image for this attraction
      */
     public Boolean hasImage() {
         return mAttrImage != NO_IMAGE_PROVIDED;

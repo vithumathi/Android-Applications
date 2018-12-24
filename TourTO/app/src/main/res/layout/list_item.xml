@@ -25,20 +25,20 @@
         android:paddingRight="10dp">
 
         <TextView
-            android:id="@+id/song_name_text_view"
+            android:id="@+id/attraction_name_text_view"
             style="@style/list_item_style"
             android:textAppearance="@android:style/TextAppearance.Medium"
             android:textStyle="bold"
             tools:text="@string/list_attr_name" />
 
         <TextView
-            android:id="@+id/album_name_text_view"
+            android:id="@+id/attraction_disc_text_view"
             style="@style/list_item_style"
             android:textAppearance="@android:style/TextAppearance.Small"
             tools:text="@string/list_attr_disc" />
 
         <TextView
-            android:id="@+id/artist_name_text_view"
+            android:id="@+id/attraction_addr_text_view"
             style="@style/list_item_style"
             android:textAppearance="@android:style/TextAppearance.Small"
             tools:text="@string/list_attr_addr" />
