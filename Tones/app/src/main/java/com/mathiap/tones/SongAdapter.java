@@ -11,13 +11,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * {@link SongAdapter} is an {@link ArrayAdapter} that can provide the layout for each list item
  * based on a data source, which is a list of {@link Song} objects.
  */
 public class SongAdapter extends ArrayAdapter<Song> {
-    public SongAdapter(Activity context, ArrayList<Song> mSongs) {
+    public SongAdapter(Activity context, List<Song> mSongs) {
         super(context, 0, mSongs);
     }
 

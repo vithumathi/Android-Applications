@@ -12,6 +12,7 @@ import android.widget.GridView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * {@link Fragment} that displays the list of songs.
@@ -26,7 +27,7 @@ public class MyLibraryFragment extends Fragment {
                              Bundle savedInstanceState) {
         final View rootView = inflater.inflate(R.layout.song_list, container, false);
         // Create a list of songs
-        final ArrayList<Song> songs = new ArrayList<Song>();
+        final List<Song> songs = new ArrayList<Song>();
         songs.add(new Song("Hey hello", "Hello", "Chris", R.drawable.cover1));
         songs.add(new Song("Blast off", "Renegade", "Yuvan", R.drawable.cover2));
         songs.add(new Song("Mask off", "Future", "Future", R.drawable.cover4));
