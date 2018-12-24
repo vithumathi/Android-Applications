@@ -14,8 +14,8 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class FoodFragment extends Fragment {
-    public FoodFragment() {
+public class EventsFragment extends Fragment {
+    public EventsFragment() {
         // Required empty public constructor
     }
 
@@ -26,11 +26,13 @@ public class FoodFragment extends Fragment {
 
         final List<Attraction> attraction = new ArrayList<Attraction>();
 
-        attraction.add(new Attraction(getString(R.string.res_one), getString(R.string.res_one_disc), getString(R.string.res_one_addr), R.drawable.wilbur_mexicana));
-        attraction.add(new Attraction(getString(R.string.res_two), getString(R.string.res_two_disc), getString(R.string.res_two_addr), R.drawable.cactus_club));
-        attraction.add(new Attraction(getString(R.string.res_three), getString(R.string.res_three_disc), getString(R.string.res_three_addr), R.drawable.naan_kabob));
-        attraction.add(new Attraction(getString(R.string.res_four), getString(R.string.res_four_disc), getString(R.string.res_four_addr), R.drawable.drake_one_fifty));
-        attraction.add(new Attraction(getString(R.string.res_five), getString(R.string.res_five_disc), getString(R.string.res_five_addr), R.drawable.pai));
+        attraction.add(new Attraction(getString(R.string.event_one), getString(R.string.event_one_disc), getString(R.string.event_one_addr)));
+        attraction.add(new Attraction(getString(R.string.event_two), getString(R.string.event_two_disc), getString(R.string.event_two_addr)));
+        attraction.add(new Attraction(getString(R.string.event_three), getString(R.string.event_three_disc), getString(R.string.event_three_addr)));
+        attraction.add(new Attraction(getString(R.string.event_four), getString(R.string.event_four_disc), getString(R.string.event_four_addr)));
+        attraction.add(new Attraction(getString(R.string.event_five), getString(R.string.event_five_disc), getString(R.string.event_five_addr)));
+        attraction.add(new Attraction(getString(R.string.event_six), getString(R.string.event_six_disc), getString(R.string.event_six_addr)));
+        attraction.add(new Attraction(getString(R.string.event_seven), getString(R.string.event_seven_disc), getString(R.string.event_seven_addr)));
 
         AttractionsAdapter itemsAdapter = new AttractionsAdapter(getActivity(), attraction);
         ListView listView = (ListView) rootView.findViewById(R.id.list);

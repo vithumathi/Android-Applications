@@ -5,6 +5,8 @@ package com.mathiap.tourto;
  * It contains the attraction name, a short description, address and an image.
  */
 public class Attraction {
+
+    private static final int NO_IMAGE_PROVIDED = -1;
     /**
      * Name of the attraction
      */
@@ -20,7 +22,20 @@ public class Attraction {
     /**
      * Image resource ID for the attraction
      */
-    private int mAttrImage;
+    private int mAttrImage = NO_IMAGE_PROVIDED;
+
+    /**
+     * Create a new song object.
+     *
+     * @param attrName   is the attraction name
+     * @param attrDisc  is the attraction description
+     * @param attrAddr is address of the attraction
+     */
+    public Attraction(String attrName, String attrDisc, String attrAddr) {
+        this.mAttrName = attrName;
+        this.mAttrDisc = attrDisc;
+        this.mAttrAddr = attrAddr;
+    }
 
     /**
      * Create a new song object.
@@ -36,6 +51,8 @@ public class Attraction {
         this.mAttrAddr = attrAddr;
         this.mAttrImage = attrImage;
     }
+
+
 
     /**
      * @return the attraction name
@@ -63,6 +80,13 @@ public class Attraction {
      */
     public int getmAttrImage() {
         return mAttrImage;
+    }
+
+    /**
+     * @return whether or not there is an image for this word
+     */
+    public Boolean hasImage() {
+        return mAttrImage != NO_IMAGE_PROVIDED;
     }
 
     /**
