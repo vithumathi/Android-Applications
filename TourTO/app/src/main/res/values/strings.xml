@@ -38,9 +38,31 @@
     <!--Attractions address-->
 
     <string name="cn_tower_addr">301 Front St W, Toronto, ON M5V 2T6</string>
-    <string name="gooderham_building_addr">49 Wellington Street East, Toronto, ON M5E 1C9 </string>
+    <string name="gooderham_building_addr">49 Wellington Street East, Toronto, ON M5E 1C9</string>
     <string name="casa_loma_addr">1 Austin Terrace, Toronto, ON M5R 1X8</string>
     <string name="royal_ontario_museum_addr"> 100 Queens Park, Toronto, ON M5S 2C6</string>
     <string name="aquarium_addr">288 Bremner Blvd, Toronto, ON M5V 3L9</string>
+
+
+
+    <!--Sports name-->
+    <string name="raptors">Raptors</string>
+    <string name="blue_jays">Blue Jays</string>
+    <string name="leafs">Toronto Maple Leafs</string>
+    <string name="tfc">Toronto FC</string>
+
+    <!--Sports description-->
+    <string name="raptors_disc">The Raptors compete in the National Basketball Association, as a member club of the league\'s Eastern Conference Atlantic Division</string>
+    <string name="blue_jays_disc">Catch a glimpse of 92-93 Back-to-back champs.</string>
+    <string name="leafs_disc">Stop by the arena and Watch the second most valuable franchise in the NHL and the 13 time Stanley cup champions in action!</string>
+    <string name="tfc_disc">The Reds. Root for the 2017 MLS Champs at the BMO filed!</string>
+
+
+
+    <!--Sports address-->
+    <string name="raptors_addr">40 Bay St, Toronto, ON M5J 2X2</string>
+    <string name="blue_jays_addr">1 Blue Jays Way, Toronto, ON M5V 1J1</string>
+    <string name="leafs_addr">40 Bay St, Toronto, ON M5J 2X2</string>
+    <string name="tfc_addr">170 Princes\' Blvd, Toronto, ON M6K 3C3</string>
 
 </resources>
