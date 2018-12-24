@@ -38,7 +38,7 @@ public class CategoryAdapter extends FragmentPagerAdapter {
         } else if (position == 2) {
             return new FoodFragment();
         } else {
-            return new HistoryFragment();
+            return new EventsFragment();
         }
     }
 

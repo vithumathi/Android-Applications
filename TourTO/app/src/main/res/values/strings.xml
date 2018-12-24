@@ -2,7 +2,7 @@
     <string name="app_name">TourTO</string>
 
     <!-- Category name for phrases [CHAR LIMIT=20] -->
-    <string name="category_attractions">Attractions</string>
+    <string name="category_attractions">Top Attractions</string>
 
     <!-- Category name for the vocabulary words for colors [CHAR LIMIT=20] -->
     <string name="category_sports">Sports</string>
@@ -38,9 +38,86 @@
     <!--Attractions address-->
 
     <string name="cn_tower_addr">301 Front St W, Toronto, ON M5V 2T6</string>
-    <string name="gooderham_building_addr">49 Wellington Street East, Toronto, ON M5E 1C9 </string>
+    <string name="gooderham_building_addr">49 Wellington Street East, Toronto, ON M5E 1C9</string>
     <string name="casa_loma_addr">1 Austin Terrace, Toronto, ON M5R 1X8</string>
     <string name="royal_ontario_museum_addr"> 100 Queens Park, Toronto, ON M5S 2C6</string>
     <string name="aquarium_addr">288 Bremner Blvd, Toronto, ON M5V 3L9</string>
+
+
+
+    <!--Sports name-->
+    <string name="raptors">Raptors</string>
+    <string name="blue_jays">Blue Jays</string>
+    <string name="leafs">Toronto Maple Leafs</string>
+    <string name="tfc">Toronto FC</string>
+
+    <!--Sports description-->
+    <string name="raptors_disc">The Raptors compete in the National Basketball Association, as a member club of the league\'s Eastern Conference Atlantic Division</string>
+    <string name="blue_jays_disc">Catch a glimpse of 92-93 Back-to-back champs.</string>
+    <string name="leafs_disc">Stop by the arena &amp; Watch the second most valuable franchise in the NHL and the 13 time Stanley cup champions in action!</string>
+    <string name="tfc_disc">The Reds. Root for the 2017 MLS Champs at the BMO filed!</string>
+
+
+
+    <!--Sports address-->
+    <string name="raptors_addr">40 Bay St, Toronto, ON M5J 2X2</string>
+    <string name="blue_jays_addr">1 Blue Jays Way, Toronto, ON M5V 1J1</string>
+    <string name="leafs_addr">40 Bay St, Toronto, ON M5J 2X2</string>
+    <string name="tfc_addr">170 Princes\' Blvd, Toronto, ON M6K 3C3</string>
+
+    <!--Restaurant name-->
+    <string name="res_one">Wilbur Mexicana</string>
+    <string name="res_two">Cactus Club Cafe</string>
+    <string name="res_three">Naan &amp; Kabob</string>
+    <string name="res_four">Drake One Fifty</string>
+    <string name="res_five">PAI</string>
+
+    <!--Restaurant description-->
+    <string name="res_one_disc">This apothecary-inspired counter serve dishes up Mexican street food like tacos &amp; burritos.</string>
+    <string name="res_two_disc"> Cactus Club Cafe offers the best in global cuisine using local, fresh ingredients served in a vibrant, contemporary setting.</string>
+    <string name="res_three_disc">A Afghani Middle Eastern restaurant serving authentic, fresh, local, organic and halal food</string>
+    <string name="res_four_disc">An engaging concept that fuses food, drink, and art, Drake One Fifty is a slice of flair in the financial district.</string>
+    <string name="res_five_disc">Casual Northern Thai spot serving dishes like salted crab &amp; papaya salad.</string>
+
+
+
+    <!--Restaurant address-->
+    <string name="res_one_addr">40 Bay St, Toronto, ON M5J 2X2</string>
+    <string name="res_two_addr">First Canadian Place, 77 Adelaide St W, Toronto, ON M5X 1C1</string>
+    <string name="res_three_addr">691 Yonge St, Toronto, ON M4Y 2B2</string>
+    <string name="res_four_addr">150 York St, Toronto, ON M5H 3S5</string>
+    <string name="res_five_addr">18 Duncan St, Toronto, ON M5H 3G8</string>
+
+    <!--Event name-->
+    <string name="event_one">Winter at Ontario Place 2018</string>
+    <string name="event_two">Winter Flower Show 2018</string>
+    <string name="event_three">A Christmas Carol</string>
+    <string name="event_four">Champions of Magic</string>
+    <string name="event_five">Hockey Hall of Fame Stanley Cup 125th Anniversary Tribute</string>
+    <string name="event_six">Metro Toronto Convention Centre Holiday Windows</string>
+    <string name="event_seven">Newmarket Ice Lounge</string>
+
+
+    <!--Event description-->
+    <string name="event_one_disc">Ontario Place</string>
+    <string name="event_two_disc">Centennial Park Conservatory Winter Flower Show</string>
+    <string name="event_three_disc">Young Centre for the Performing Arts</string>
+    <string name="event_four_disc">Bluma Appel Theatre</string>
+    <string name="event_five_disc">Hockey Hall of Fame</string>
+    <string name="event_six_disc">Metro Toronto Convention Centre</string>
+    <string name="event_seven_disc">200 Doug Duncan Dr</string>
+
+
+
+
+    <!--Event address-->
+    <string name="event_one_addr">November 23, 2018 – March 17, 2019 \n5:00 AM – 11:59 PM</string>
+    <string name="event_two_addr">December 2, 2018 – January 9, 2019 \n10:00 AM – 7:00 PM</string>
+    <string name="event_three_addr">December 7 – 24, 2018 \n7:30 PM – 9:30 PM</string>
+    <string name="event_four_addr">December 19, 2018 – January 6, 2019 \n8:00 PM – 10:10 PM</string>
+    <string name="event_five_addr">18 Duncan St, Toronto, ON M5H 3G8</string>
+    <string name="event_six_addr">December 2, 2018 – January 9, 2019</string>
+    <string name="event_seven_addr">November 30, 2018 – February 1, 2019 \n9:00 AM – 11:00 PM</string>
+
 
 </resources>
