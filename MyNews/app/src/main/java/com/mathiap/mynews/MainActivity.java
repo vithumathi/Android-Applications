@@ -15,12 +15,12 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity  implements LoaderManager.LoaderCallbacks<List<NewsArticle>> {
     /**
-     * URL to query the USGS dataset for earthquake information
+     * URL to query the Guardian dataset for news article information
      */
     private static final String USGS_REQUEST_URL =
             "https://content.guardianapis.com/search?q=debate&tag=politics/politics&from-date=2014-01-01&api-key=test";
 
-    /** Adapter for the list of earthquakes */
+    /** Adapter for the list of news articles */
     private NewsArticleAdapter mAdapter;
 
     /**
@@ -45,17 +45,17 @@ public class MainActivity extends AppCompatActivity  implements LoaderManager.Lo
         newsArticleListView.setAdapter(mAdapter);
 
         // Set an item click listener on the ListView, which sends an intent to a web browser
-        // to open a website with more information about the selected earthquake.
+        // to open a website with more information about the selected news article.
         newsArticleListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                // Find the current earthquake that was clicked on
+                // Find the current news article that was clicked on
                 NewsArticle currentArticle = mAdapter.getItem(position);
 
                 // Convert the String URL into a URI object (to pass into the Intent constructor)
                 Uri earthquakeUri = Uri.parse(currentArticle.getmUrl());
 
-                // Create a new intent to view the earthquake URI
+                // Create a new intent to view the news article URI
                 Intent websiteIntent = new Intent(Intent.ACTION_VIEW, earthquakeUri);
 
                 // Send the intent to launch a new activity
@@ -75,10 +75,10 @@ public class MainActivity extends AppCompatActivity  implements LoaderManager.Lo
     @Override
     public void onLoadFinished(Loader<List<NewsArticle>> loader, List<NewsArticle> newsArticles) {
 
-        // Clear the adapter of previous earthquake data
+        // Clear the adapter of previous news article data
         mAdapter.clear();
 
-        // If there is a valid list of {@link Earthquake}s, then add them to the adapter's
+        // If there is a valid list of {@link NewsArticle}s, then add them to the adapter's
         // data set. This will trigger the ListView to update.
         if (newsArticles != null && !newsArticles.isEmpty()) {
             mAdapter.addAll(newsArticles);
