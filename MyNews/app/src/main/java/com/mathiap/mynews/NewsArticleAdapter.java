@@ -32,12 +32,11 @@ import java.util.List;
 /**
  * An {@link NewsArticleAdapter} knows how to create a list item layout for each earthquake
  * in the data source (a list of {@link NewsArticle} objects).
- *
+ * <p>
  * These list item layouts will be provided to an adapter view like ListView
  * to be displayed to the user.
  */
 public class NewsArticleAdapter extends ArrayAdapter<NewsArticle> {
-
     /**
      * The part of the location string from the USGS service that we use to determine
      * whether or not there is a location offset present ("5km N of Cairo, Egypt").
@@ -47,7 +46,7 @@ public class NewsArticleAdapter extends ArrayAdapter<NewsArticle> {
     /**
      * Constructs a new {@link NewsArticleAdapter}.
      *
-     * @param context of the app
+     * @param context     of the app
      * @param nwsArticles is the list of news articles, which is the data source of the adapter
      */
     public NewsArticleAdapter(Context context, List<NewsArticle> nwsArticles) {
@@ -67,23 +66,16 @@ public class NewsArticleAdapter extends ArrayAdapter<NewsArticle> {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.news_articles_list_item, parent, false);
         }
-
         // Find the earthquake at the given position in the list of earthquakes
         NewsArticle currentArticle = getItem(position);
-
-
         // Find the TextView with view ID location
         TextView artlTile = (TextView) listItemView.findViewById(R.id.artl_ttl_txt_view);
         // Display the location of the current earthquake in that TextView
         artlTile.setText(currentArticle.getmTile());
-
         // Find the TextView with view ID location offset
         TextView artlSection = (TextView) listItemView.findViewById(R.id.artl_sec_txt_view);
         // Display the location offset of the current earthquake in that TextView
         artlSection.setText(currentArticle.getmSection());
-
-
-
         String articleDate = currentArticle.getmDate();
         String displayDate = " ";
         // Check whether the originalLocation string contains the " of " text
@@ -95,11 +87,9 @@ public class NewsArticleAdapter extends ArrayAdapter<NewsArticle> {
             // Location offset should be "5km N " + " of " --> "5km N of"
             displayDate = parts[0];
         }
-
         // Find the TextView with view ID location offset
         TextView artlDate = (TextView) listItemView.findViewById(R.id.artl_date_txt_view);
         artlDate.setText(displayDate);
-
         // Return the list item view that is now showing the appropriate data
         return listItemView;
     }

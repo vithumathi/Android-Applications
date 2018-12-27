@@ -179,7 +179,7 @@ public final class QueryUtils {
                 NewsArticle aArticle = new NewsArticle(title, section, date, url);
                 // Add the new {@link NewsArticle} to the list of news articles.
                 articles.add(aArticle);
-                Log.i("Article retrieved", title + " " + section + " " + date + " " + url);
+                //Log.i("Article retrieved", title + " " + section + " " + date + " " + url);
             }
         } catch (JSONException e) {
             // If an error is thrown when executing any of the above statements in the "try" block,
