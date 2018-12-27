@@ -53,7 +53,7 @@ public final class QueryUtils {
     /**
      * Query the Guardian dataset and return a list of {@link NewsArticle} objects.
      */
-    public static List<NewsArticle> fetchEarthquakeData(String requestUrl) {
+    public static List<NewsArticle> fetchNewsArticleData(String requestUrl) {
         // Create URL object
         URL url = createUrl(requestUrl);
         // Perform HTTP request to the URL and receive a JSON response back
@@ -179,7 +179,7 @@ public final class QueryUtils {
                 NewsArticle aArticle = new NewsArticle(title, section, date, url);
                 // Add the new {@link NewsArticle} to the list of news articles.
                 articles.add(aArticle);
-                Log.i("Article", title + " " + section + " " + date + " " + url);
+                Log.i("Article retrieved", title + " " + section + " " + date + " " + url);
             }
         } catch (JSONException e) {
             // If an error is thrown when executing any of the above statements in the "try" block,
