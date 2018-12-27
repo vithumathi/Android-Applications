@@ -33,14 +33,18 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.net.HttpURLConnection.HTTP_OK;
+
 /**
- * Helper methods related to requesting and receiving earthquake data from the Guardian.
+ * Helper methods related to requesting and receiving news article data from the Guardian.
  */
 public final class QueryUtils {
     /**
      * Tag for the log messages
      */
     private static final String LOG_TAG = QueryUtils.class.getSimpleName();
+    private static final int READ_TIMEOUT = 10000;
+    private static final int CONNECT_TIMEOUT = 15000;
 
     /**
      * Create a private constructor because no one should ever create a {@link QueryUtils} object.
@@ -95,20 +99,20 @@ public final class QueryUtils {
         InputStream inputStream = null;
         try {
             urlConnection = (HttpURLConnection) url.openConnection();
-            urlConnection.setReadTimeout(10000 /* milliseconds */);
-            urlConnection.setConnectTimeout(15000 /* milliseconds */);
+            urlConnection.setReadTimeout(READ_TIMEOUT /* milliseconds */);
+            urlConnection.setConnectTimeout(CONNECT_TIMEOUT /* milliseconds */);
             urlConnection.setRequestMethod("GET");
             urlConnection.connect();
             // If the request was successful (response code 200),
             // then read the input stream and parse the response.
-            if (urlConnection.getResponseCode() == 200) {
+            if (urlConnection.getResponseCode() == HTTP_OK) {
                 inputStream = urlConnection.getInputStream();
                 jsonResponse = readFromStream(inputStream);
             } else {
                 Log.e(LOG_TAG, "Error response code: " + urlConnection.getResponseCode());
             }
         } catch (IOException e) {
-            Log.e(LOG_TAG, "Problem retrieving the earthquake JSON results.", e);
+            Log.e(LOG_TAG, "Problem retrieving the news article JSON results.", e);
         } finally {
             if (urlConnection != null) {
                 urlConnection.disconnect();
@@ -174,20 +178,36 @@ public final class QueryUtils {
                 String date = currentArticle.getString("webPublicationDate");
                 // Extract the value for the key called "url"
                 String url = currentArticle.getString("webUrl");
+                JSONArray tags = currentArticle.getJSONArray("tags");
+                int j = 0;
+                String author = null;
+                int aCount = 0;
+                StringBuilder strBuilder = new StringBuilder();
+                JSONObject tag = tags.optJSONObject(j);
+                while (tag != null) {
+                    if (aCount != 0) {
+                        strBuilder.append(", ").append(tag.optString("webTitle"));
+                    } else {
+                        strBuilder.append(tag.optString("webTitle"));
+                    }
+                    aCount++;
+                    j++;
+                    tag = tags.optJSONObject(j);
+                }
+                author = strBuilder.toString();
                 // Create a new {@link NewsArticle} object with the title, section, date,
                 // and url from the JSON response.
-                NewsArticle aArticle = new NewsArticle(title, section, date, url);
+                NewsArticle aArticle = new NewsArticle(title, author, section, date, url);
                 // Add the new {@link NewsArticle} to the list of news articles.
                 articles.add(aArticle);
-                //Log.i("Article retrieved", title + " " + section + " " + date + " " + url);
             }
         } catch (JSONException e) {
             // If an error is thrown when executing any of the above statements in the "try" block,
             // catch the exception here, so the app doesn't crash. Print a log message
             // with the message from the exception.
-            Log.e("QueryUtils", "Problem parsing the earthquake JSON results", e);
+            Log.e("QueryUtils", "Problem parsing the news article JSON results", e);
         }
-        // Return the list of earthquakes
+        // Return the list of news articles
         return articles;
     }
 }

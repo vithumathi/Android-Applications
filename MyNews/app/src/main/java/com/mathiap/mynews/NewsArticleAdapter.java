@@ -30,7 +30,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * An {@link NewsArticleAdapter} knows how to create a list item layout for each earthquake
+ * An {@link NewsArticleAdapter} knows how to create a list item layout for each news article
  * in the data source (a list of {@link NewsArticle} objects).
  * <p>
  * These list item layouts will be provided to an adapter view like ListView
@@ -54,8 +54,8 @@ public class NewsArticleAdapter extends ArrayAdapter<NewsArticle> {
     }
 
     /**
-     * Returns a list item view that displays information about the earthquake at the given position
-     * in the list of earthquakes.
+     * Returns a list item view that displays information about the news article at the given position
+     * in the list of news articles.
      */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -66,16 +66,24 @@ public class NewsArticleAdapter extends ArrayAdapter<NewsArticle> {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.news_articles_list_item, parent, false);
         }
-        // Find the earthquake at the given position in the list of earthquakes
+        // Find the news article at the given position in the list of news articles
         NewsArticle currentArticle = getItem(position);
         // Find the TextView with view ID location
         TextView artlTile = (TextView) listItemView.findViewById(R.id.artl_ttl_txt_view);
-        // Display the location of the current earthquake in that TextView
+        // Display the location of the current news article in that TextView
         artlTile.setText(currentArticle.getmTile());
         // Find the TextView with view ID location offset
         TextView artlSection = (TextView) listItemView.findViewById(R.id.artl_sec_txt_view);
-        // Display the location offset of the current earthquake in that TextView
+        // Display the location offset of the current news article in that TextView
         artlSection.setText(currentArticle.getmSection());
+        TextView artlAuth = (TextView) listItemView.findViewById(R.id.artl_auth_txt_view);
+        // Display the location offset of the current news article in that TextView
+        String auth = currentArticle.getmAuthors();
+        if (auth.equals(null) || auth.equals("Editorial")) {
+            artlAuth.setVisibility(View.GONE);
+        } else {
+            artlAuth.setText(currentArticle.getmAuthors());
+        }
         String articleDate = currentArticle.getmDate();
         String displayDate = " ";
         // Check whether the originalLocation string contains the " of " text

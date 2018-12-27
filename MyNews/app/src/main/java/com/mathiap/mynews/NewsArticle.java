@@ -5,32 +5,38 @@ package com.mathiap.mynews;
  */
 public class NewsArticle {
     /**
-     * Magnitude of the earthquake
+     * Title of the news article
      */
     private String mTile;
     /**
-     * Location of the earthquake
+     * Section of the news article
      */
     private String mSection;
     /**
-     * Time of the earthquake
+     * Date the article is published
      */
     private String mDate;
     /**
-     * Website URL of the earthquake
+     * Website URL of the news article
      */
     private String mUrl;
+    /**
+     * Author(s) of the news article
+     */
+    private String mAuthors;
 
     /**
      * Constructs a new {@link NewsArticle} object.
      *
      * @param title   is the title of the news article
+     * @param authors is the author(s) of the news article
      * @param section is the section of the news article
      * @param date    is the date the article is written
      * @param url     is the website URL to read and find more information about the article
      */
-    public NewsArticle(String title, String section, String date, String url) {
+    public NewsArticle(String title, String authors, String section, String date, String url) {
         mTile = title;
+        mAuthors = authors;
         mSection = section;
         mDate = date;
         mUrl = url;
@@ -64,5 +70,9 @@ public class NewsArticle {
      */
     public String getmUrl() {
         return mUrl;
+    }
+
+    public String getmAuthors() {
+        return mAuthors;
     }
 }
