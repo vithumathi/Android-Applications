@@ -25,18 +25,20 @@ import java.util.List;
  * network request to the given URL.
  */
 public class NewsArticleLoader extends AsyncTaskLoader<List<NewsArticle>> {
-
-    /** Tag for log messages */
+    /**
+     * Tag for log messages
+     */
     private static final String LOG_TAG = NewsArticleLoader.class.getName();
-
-    /** Query URL */
+    /**
+     * Query URL
+     */
     private String mUrl;
 
     /**
      * Constructs a new {@link NewsArticleLoader}.
      *
      * @param context of the activity
-     * @param url to load data from
+     * @param url     to load data from
      */
     public NewsArticleLoader(Context context, String url) {
         super(context);
@@ -56,7 +58,6 @@ public class NewsArticleLoader extends AsyncTaskLoader<List<NewsArticle>> {
         if (mUrl == null) {
             return null;
         }
-
         // Perform the network request, parse the response, and extract a list of earthquakes.
         List<NewsArticle> nwsArticle = QueryUtils.fetchNewsArticleData(mUrl);
         return nwsArticle;
