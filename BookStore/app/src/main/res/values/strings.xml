@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BookStore</string>
+    <string name="error_insert">Error with saving the book</string>
+    <string name="error_retrieve">Error retrieving records</string>
+</resources>
