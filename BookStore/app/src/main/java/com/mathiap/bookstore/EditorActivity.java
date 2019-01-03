@@ -163,7 +163,7 @@ public class EditorActivity extends AppCompatActivity implements
     /**
      * Get user input from editor and save book into database.
      */
-    private void saveBook() {
+    private int saveBook() {
         // Read from input fields
         // Use trim to eliminate leading or trailing white space
         String nameString = mNameEditText.getText().toString().trim();
@@ -178,8 +178,44 @@ public class EditorActivity extends AppCompatActivity implements
                 TextUtils.isEmpty(quantityString) && TextUtils.isEmpty(supplierString) && TextUtils.isEmpty(supplierContactString)) {
             // Since no fields were modified, we can return early without creating a new book inventory.
             // No need to create ContentValues and no need to do any ContentProvider operations.
-            return;
+            return 2;
         }
+
+        if (TextUtils.isEmpty(nameString)) {
+            mNameEditText.setError(getString(R.string.error_required));
+            Toast.makeText(this, "REQUIRED! Product name cant be empty",
+                    Toast.LENGTH_SHORT).show();
+            return 1;
+        }
+
+        if (TextUtils.isEmpty(priceString)) {
+            mPriceEditText.setError(getString(R.string.error_required));
+            Toast.makeText(this, "REQUIRED! Price cant be empty",
+                    Toast.LENGTH_SHORT).show();
+            return 1;
+        }
+
+        if (TextUtils.isEmpty(quantityString)) {
+            mQuantityEditText.setError(getString(R.string.error_required));
+            Toast.makeText(this, "REQUIRED! Quantity cant be empty",
+                    Toast.LENGTH_SHORT).show();
+            return 1;
+        }
+
+        if (TextUtils.isEmpty(supplierString)) {
+            mSuppEditText.setError(getString(R.string.error_required));
+            Toast.makeText(this, "REQUIRED! Supplier cant be empty",
+                    Toast.LENGTH_SHORT).show();
+            return 1;
+        }
+
+        if (TextUtils.isEmpty(supplierContactString)) {
+            mSuppContactEditText.setError(getString(R.string.error_required));
+            Toast.makeText(this, "REQUIRED! Supplier contact cant be empty",
+                    Toast.LENGTH_SHORT).show();
+            return 1;
+        }
+
         // Create a ContentValues object where column names are the keys,
         // and book attributes from the editor are the values.
         ContentValues values = new ContentValues();
@@ -194,7 +230,9 @@ public class EditorActivity extends AppCompatActivity implements
             quantity = Integer.parseInt(quantityString);
         }
         values.put(BookEntry.COLUMN_QUANTITY, quantity);
+
         values.put(BookEntry.COLUMN_SUPPLIER_NAME, supplierString);
+
         values.put(BookEntry.COLUMN_SUPPLIER_PHONE, supplierContactString);
         // Determine if this is a new or existing book inventory by checking if mCurrentBookUri is null or not
         if (mCurrentBookUri == null) {
@@ -228,6 +266,8 @@ public class EditorActivity extends AppCompatActivity implements
                         Toast.LENGTH_SHORT).show();
             }
         }
+
+        return 0;
     }
 
     @Override
@@ -260,9 +300,8 @@ public class EditorActivity extends AppCompatActivity implements
             // Respond to a click on the "Save" menu option
             case R.id.action_save:
                 // Save book to database
-                saveBook();
-                // Exit activity
-                finish();
+                int rVal = saveBook();
+                if (!(rVal == 1)) finish();
                 return true;
             // Respond to a click on the "Delete" menu option
             case R.id.action_delete:
