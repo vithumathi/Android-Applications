@@ -1,5 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">BookStore</string>
-    <string name="error_insert">Error with saving the book</string>
-    <string name="error_retrieve">Error retrieving records</string>
+    <!-- Name for the application [CHAR LIMIT=12] -->
+    <string name="app_name">Book Inventory</string>
+
+    <string name="action_delete_all_entries">Delete All Books</string>
+    <string name="editor_activity_title_new_book">Add a Book</string>
+    <string name="action_save">Save</string>
+    <string name="action_delete">Delete</string>
+    <string name="label_product_name">Name</string>
+    <string name="label_price">Price</string>
+    <string name="label_quantity">Quantity</string>
+    <string name="label_supplier">Supplier</string>
+    <string name="label_supplier_contact">Supplier Contact</string>
+    <string name="hint_book_name">Product Name</string>
+    <string name="hint_book_price">Price</string>
+    <string name="hint_book_quantity">Quantity</string>
+    <string name="hint_book_supplier">Supplier</string>
+    <string name="hint_book_supplier_contact">Supplier Contact</string>
+    <string name="editor_activity_title_edit_book">Edit Book</string>
+    <string name="editor_insert_book_failed">Error with saving book</string>
+    <string name="editor_update_book_successful">Book inventory updated</string>
+    <string name="editor_insert_book_successful">Book saved</string>
+    <string name="editor_update_book_failed">Error with updating book inventory</string>
+    <string name="unsaved_changes_dialog_msg">Not Saved</string>
+    <string name="discard">Discard</string>
+    <string name="keep_editing">Keep Editing</string>
+    <string name="delete_dialog_msg">Are you sure you want to delete?</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="editor_delete_book_failed">Failed deletion</string>
+    <string name="editor_delete_book_successful">Deletion successful</string>
+    <string name="empty_view_title_text">There is no books in the shelves yet...</string>
+    <string name="empty_view_subtitle_text">Get started by adding a book</string>
+    <string name="error_insert">Error inserting</string>
+    <string name="error_retrieve">Error retrieving</string>
+    <string name="increase_quantity">+</string>
+    <string name="decrease_quantity">-</string>
+    <string name="delete_book_entry">DELETE</string>
+    <string name="call_supplier">CALL SUPPLIER</string>
+    <string name="no_inventory">Cannot reduce quantity. There exists no inventory for this product</string>
+    <string name="sale">SALE</string>
+    <string name="sold">Transaction complete!</string>
+    <string name="no_stock">Product is no longer in stock!</string>
 </resources>
