@@ -8,7 +8,6 @@ import android.provider.BaseColumns;
  * API Contract for the Book store app.
  */
 public final class BookStoreContract {
-
     /**
      * The "Content authority" is a name for the entire content provider, similar to the
      * relationship between a domain name and its website.  A convenient string to use for the
@@ -39,16 +38,14 @@ public final class BookStoreContract {
      * Each entry in the table represents a single book.
      */
     public static final class BookEntry implements BaseColumns {
-        /** The content URI to access the book store data in the provider */
+        /**
+         * The content URI to access the book store data in the provider
+         */
         public static final Uri CONTENT_URI = Uri.withAppendedPath(BASE_CONTENT_URI, PATH_BOOKS);
-
         public static final String CONTENT_LIST_TYPE =
                 ContentResolver.CURSOR_DIR_BASE_TYPE + "/" + CONTENT_AUTHORITY + "/" + PATH_BOOKS;
-
-
         public static final String CONTENT_ITEM_TYPE =
                 ContentResolver.CURSOR_ITEM_BASE_TYPE + "/" + CONTENT_AUTHORITY + "/" + PATH_BOOKS;
-
         /**
          * Name of database table for books
          */
