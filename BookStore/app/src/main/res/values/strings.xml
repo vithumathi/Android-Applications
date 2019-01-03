@@ -42,4 +42,5 @@
     <string name="sale">SALE</string>
     <string name="sold">Transaction complete!</string>
     <string name="no_stock">Product is no longer in stock!</string>
+    <string name="error_required">Required</string>
 </resources>
