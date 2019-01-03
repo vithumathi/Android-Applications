@@ -1,6 +1,6 @@
 Android Basics Nanodegree program
 ===================================
-This reposity contains a list of project developed as part of the Udacity's Android Basics Nanodegree by Google.
+This repository contains a list of project developed as part of the Udacity's Android Basics Nanodegree by Google.
 
 
 A Single Screen App
